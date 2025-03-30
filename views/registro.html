@@ -100,6 +100,7 @@
                             <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Anterior</button>
                             <button type="button" class="btn btn-primary" id="nextBtn">Siguiente</button>
                             <button type="button" class="btn btn-success" id="submitBtn" style="display: none;">Registrarse</button>
+                            <button type="button" class="btn btn-danger" id="exitBtn">Salir</button>
                         </div>
 
                         <!-- Mensajes de estado -->
@@ -243,6 +244,11 @@
                 `;
                 console.error('Error:', error);
             }
+        }
+        document.getElementById('exitBtn').addEventListener('click', exitForm);
+
+        function exitForm() {
+            window.location.href = '/login';
         }
     </script>
 </body>
